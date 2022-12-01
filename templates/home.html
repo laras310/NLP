@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+<body>
+
+    {% block content %}
+    <div class="flexbox">
+        <div class="box">
+            <h1>Plagiarism Checker</h1>
+            <br>
+            <br>
+            <div class="flex-col">
+                <form action="/home" method="POST">
+                    <div  class="flex-row">
+                        <label>Document 1</label>
+                        <textarea name="document1"></textarea>
+                    </div>
+                    <div class="flex-row">
+                        <label>Document 2</label>
+                        <textarea name="document2"></textarea>
+                    </div>
+                    <d>
+                        <input type="submit"/>
+                    </div>
+                    
+                </form>
+            </div>
+            
+        </div>
+    </div>
+    {% endblock %}
+
+</body>
+</html>

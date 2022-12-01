@@ -24,7 +24,7 @@ def home():
         return 404
     
     elif request.method == 'GET':
-        return render_template('page.html'), 200
+        return render_template('home.html'), 200
     
     return 404
 
