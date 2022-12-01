@@ -1,29 +1,28 @@
 from flask import Flask, render_template, redirect, url_for, session, request
+from plagiarism_detection import cosine_similarity
 
 app = Flask(__name__)
 app.secret_key = 'secret'
 
 @app.route('/', methods=['GET', 'POST'])
+@app.route('/home', methods=['GET', 'POST'])
 def home():
+    # fungsi ketika pengguna mengirimkan masukkan berupa dokumen
     if request.method == 'POST':
+        # pengambilan data dokumen masukkan dari form
         document_1 = request.form.get('document_1', None)
         document_2 = request.form.get('document_2', None)
         
-        # if document_1 is not None
-        if document_1:
-            # if document_2 is None then processing document_1 without document_2
-            if not document_2:
-                # passing document_1 to the nlp function
-                result = None
-                return render_template('home.html', result=result), 200
-            
-            # passing document_1 and document_2 to the nlp function
-            result = None
-            return render_template('home.html', result=result), 200
+        # pengoperan data dokumen masukkan ke fungsi cosine_similarity
+        result = cosine_similarity(document_1, document_2)
         
-        return 404
+        # perenderan halaman home beserta hasil dari fungsi cosine_similarity
+        return result, 200
+        # return render_template('home.html', result=result), 200
     
+    # fungsi jika pengguna mengakses halaman home
     elif request.method == 'GET':
+        # perenderan halaman home
         return render_template('home.html'), 200
     
     return 404
