@@ -10,30 +10,43 @@
 <body>
 
     {% block content %}
-    <div class="flexbox">
-        <div class="box">
-            <h1>Plagiarism Checker</h1>
-            <br>
-            <br>
-            <div class="flex-col">
-                <form action="/home" method="POST">
-                    <div  class="flex-row">
-                        <label>Document 1</label>
-                        <textarea name="document_1"></textarea>
+    <div class="col-sm-8 text-left"> 
+        <h1>Plagiarism Checker</h1>
+        <br><br>
+        <div class="container-fluid">
+            <form action="/home" method="POST">
+                <div class="row" row="3">
+                
+                    <div class="col-sm-6 form-group">
+                        <label>Text 1</label>
+                        <textarea name="document_1" class="form-control" rows="10"></textarea>
                     </div>
-                    <div class="flex-row">
-                        <label>Document 2</label>
-                        <textarea name="document_2"></textarea>
+                    <div class="col-sm-6 form-group">
+                        <label>Text 2</label>
+                        <textarea name="document_2" class="form-control" rows="10"></textarea>
                     </div>
-                    <d>
-                        <input type="submit"/>
-                    </div>
-                    
-                </form>
-            </div>
-            
+                </div>
+                <input type="submit" class="text-center mx-auto"/>
+            </form>
         </div>
     </div>
+    <!-- <h1>Plagiarism Checker</h1>
+    <br><br>
+    <div class="container-fluid">
+        <div class="row" row="3">
+            <form action="/home" method="POST">
+                <div class="col-sm-5">
+                    <textarea name="document_1" class="form-control" rows="10"></textarea>
+                </div>
+                <div class="col-sm-2">
+                        <input type="submit" class="text-center mx-auto d-block"/>
+                </div>
+                <div class="col-sm-5">
+                    <textarea name="document_2" class="form-control" rows="10"></textarea>
+                </div>
+            </form>
+        </div>
+    </div> -->
     {% endblock %}
 
 </body>
