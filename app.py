@@ -17,13 +17,13 @@ def home():
         result = cosine_similarity(document_1, document_2)
         
         # perenderan halaman home beserta hasil dari fungsi cosine_similarity
-        return result, 200
+        return render_template('home.html',document_1=document_1,document_2=document_2, result=result), 200
         # return render_template('home.html', result=result), 200
     
     # fungsi jika pengguna mengakses halaman home
     elif request.method == 'GET':
         # perenderan halaman home
-        return render_template('home.html'), 200
+        return render_template('home.html',document_1=None, document_2=None, result=None), 200
     
     return 404
 
