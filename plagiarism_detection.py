@@ -64,32 +64,6 @@ def preprocessing(document_1, document_2):
         stem2.append(ps.stem(word))
     
     join2 = " ".join(stem2)
-
-    join3 = []
-
-    join3.append(join1)
-    join3.append(join2)
-
-    # join1 = stem1.apply(lambda x: ' '.join(x))
-    # join2 = stem2.apply(lambda x: ' '.join(x))
-
-    tfidf_vectorizer = TfidfVectorizer()
-    # similarity=[]
-    # similarity=similarity_fn()
-
-    # for i in range(len(stem1)):
-    #     doc1=stem1[][i]
-    #     doc2=stem2[][i]
-    # docs=(stem1,stem2)
-    tfidf_matrix = tfidf_vectorizer.fit_transform(join3)
-    cosine_sim = cosine_similarity(tfidf_matrix[0], tfidf_matrix[1])
-    # similarity.append(cosine_sim)
-
-    # Jika hanya ada 1 dokumen (dokumen_1) sebagai masukkan
-    if not document_2:
-        result = join1
-        return result
+    data = [join1, join2]
     
-    # # jika ada 2 dokumen sebagai masukkan
-    # result = cosine_sim
     return data
