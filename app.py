@@ -1,5 +1,6 @@
 from flask import Flask, render_template, redirect, url_for, session, request
 from plagiarism_detection import cosine_similarity
+from coba import plagiarism_checker
 
 app = Flask(__name__)
 app.secret_key = 'secret'
@@ -14,7 +15,7 @@ def home():
         document_2 = request.form.get('document_2', None)
         
         # pengoperan data dokumen masukkan ke fungsi cosine_similarity
-        result = cosine_similarity(document_1, document_2)
+        result = plagiarism_checker(document_1, document_2)
         
         # perenderan halaman home beserta hasil dari fungsi cosine_similarity
         return render_template('home.html',document_1=document_1,document_2=document_2, result=result), 200
