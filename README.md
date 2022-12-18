@@ -12,6 +12,17 @@
 - Ihza Fajrur R.H.	    119140130
 
 ## Instalasi GUI
+Untuk menjalankan GUI berbasis web application, pengguna perlu untuk mengunduh beberapa dependency terlebih dahulu. Cara mengunduh dependency yang dibutuhkan adalah dengan cara mengunduh semua dependency berikut dengan menggunakan command "pip install" pada Python
+- flask
+- pandas
+- matplotlib
+- seaborn
+- nltk
+- scikit-learn
+- spacy
+- Counter
+
+Detail lebih lanjut dapat dilihat pada file *requirements.txt*
 
 ## Deskripsi Penggunaan GUI
 Pertama, jalankan file *app.py*. Selanjutnya, pengguna memasukkan masing-masing 1 kalimat ke dalam 2 inputan teks yang tersedia. Program akan mengolah inputan dalam 3 tahapan yaitu preprocessing, TF-IDF, dan Cosine Similarity. Kemiripan kedua dokumen ditentukan dari besaran cosine similarity tersebut. Semakin besar nilai cosine similarity, maka indikasi plagiarisme semakin besar.
