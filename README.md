@@ -25,7 +25,7 @@ Untuk menjalankan GUI berbasis web application, pengguna perlu untuk mengunduh b
 Detail lebih lanjut dapat dilihat pada file *requirements.txt*
 
 ## Deskripsi Penggunaan GUI
-Pertama, jalankan file *app.py*. Selanjutnya, pengguna memasukkan masing-masing 1 kalimat ke dalam 2 inputan teks yang tersedia. Program akan mengolah inputan dalam 3 tahapan yaitu preprocessing, TF-IDF, dan Cosine Similarity. Kemiripan kedua dokumen ditentukan dari besaran cosine similarity tersebut. Semakin besar nilai cosine similarity, maka indikasi plagiarisme semakin besar.
+Pertama, jalankan command flask run di path *app.py*. Selanjutnya, pengguna memasukkan masing-masing 1 kalimat ke dalam 2 inputan teks yang tersedia. Program akan mengolah inputan dalam 3 tahapan yaitu preprocessing, TF-IDF, dan Cosine Similarity. Kemiripan kedua dokumen ditentukan dari besaran cosine similarity tersebut. Semakin besar nilai cosine similarity, maka indikasi plagiarisme semakin besar.
 
 ## Metode
 - Input Data dari dataset
