@@ -11,10 +11,41 @@
 
     {% block content %}
     <div class="col-sm-8 text-left"> 
-        <h1>Plagiarism Checker</h1>
-        <br><br>
+        <h1>About</h1>
         <div class="container-fluid">
-            <form action="/home" method="POST" >
+            <div>
+                <h3>Anggota Kelompok</h3>
+                <ul>
+                    <li>Aprilia Purwanto &emsp; (119140003)</li>
+                    <li>Nurul Aulia L. &emsp; (119140008)</li>
+                    <li>Edinia Rosa F. &emsp; (119140018)</li>
+                    <li>Romaita Maria S. &emsp; (119140039)</li>
+                    <li>Husliana Pratiwi &emsp; (119140042)</li>
+                    <li>Istighfariza Aprini &emsp; (119140059)</li>
+                    <li>Putri Dwisastika L. &emsp; (119140068)</li>
+                    <li>Nesa Oktavia &emsp; (119140091)</li>
+                    <li>Ihza Fajrur R.H. &emsp; (119140130)</li>
+                </ul>
+            </div>
+            <div>
+                <h3>Deskripsi Aplikasi</h3>
+                <text>Pengguna memasukkan masing-masing 1 kalimat ke dalam 2 inputan teks yang tersedia. Program akan mengolah inputan dalam 3 tahapan yaitu preprocessing, TF-IDF, dan Cosine Similarity. Kemiripan kedua dokumen ditentukan dari besaran cosine similarity tersebut. Semakin besar nilai cosine similarity, maka indikasi plagiarisme semakin besar.</text>
+            </div>
+            <div>
+                <h3>Metode</h3>
+                <ul>
+                    <li>Input Data dari dataset</li>
+                    <li>Preprocessing (Case folding, Tokenizing, Stopword Removal, Stemming)</li>
+                    <li>TF-IDF-DF</li>
+                    <li>Normalisasi Min-MAx</li>
+                    <li>Evaluasi (MAPE, MAE)</li>
+                </ul>
+            </div>
+            <div>
+                <h3>Evaluasi Sistem</h3>
+                <text>Nilai MAE sistem 0.2564173628956344</text>
+            </div>
+            <!-- <form action="/home" method="POST" >
                 <div class="row" row="3">
                 
                     <div class="col-sm-6 form-group">
@@ -34,26 +65,9 @@
             <div>
                 <h3>Result</h3>
                 <p>{{result}}</p>
-            </div>
+            </div> -->
         </div>
     </div>
-    <!-- <h1>Plagiarism Checker</h1>
-    <br><br>
-    <div class="container-fluid">
-        <div class="row" row="3">
-            <form action="/home" method="POST">
-                <div class="col-sm-5">
-                    <textarea name="document_1" class="form-control" rows="10"></textarea>
-                </div>
-                <div class="col-sm-2">
-                        <input type="submit" class="text-center mx-auto d-block"/>
-                </div>
-                <div class="col-sm-5">
-                    <textarea name="document_2" class="form-control" rows="10"></textarea>
-                </div>
-            </form>
-        </div>
-    </div> -->
     {% endblock %}
 
 </body>

@@ -38,5 +38,4 @@ Data yang digunakan untuk training model ada pada file *SICK_train.txt*
 
 ## Hasil Evaluasi Sistem
 Evaluasi sistem terdapat dalam file *model.ipynb*. Evaluasi sistem dilakukan menggunakan metrik MAE dan MAPE.
-> MAE : 0.10485853726129357
-> MAPE : 0.1078544954687591
+> MAE : 0.2564173628956344
