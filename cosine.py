@@ -33,7 +33,7 @@ from nltk.corpus.reader.wordnet import WordNetError
 import sys
 import time
 import threading
-from plagiarism_detection import preprocessing
+from preprocessing import preprocessing
 
 def plagiarism_checker(document_1, document_2):
     copydata = preprocessing(document_1, document_2)

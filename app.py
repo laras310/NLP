@@ -1,6 +1,5 @@
-from flask import Flask, render_template, redirect, url_for, session, request
-from plagiarism_detection import cosine_similarity
-from coba import plagiarism_checker
+from flask import Flask, render_template, request
+from cosine import plagiarism_checker
 
 app = Flask(__name__)
 app.secret_key = 'secret'
